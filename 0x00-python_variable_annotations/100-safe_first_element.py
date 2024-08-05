@@ -1,19 +1,17 @@
 #!/usr/bin/env python3
 """
-This module contains a function safely_get_value that retrieves
-a value from a dictionary safely, with a default fallback.
+This module contains a function safe_first_element that retrieves
+the first element of a list safely, or returns None if the list is empty.
 """
-from typing import Mapping, Any, Union, TypeVar
+from typing import List, Optional, TypeVar
 T = TypeVar('T')
 
 
-def safely_get_value(
-    dct: Mapping[Any, T], key: Any, default: Union[T, None] = None
-) -> Union[T, None]:
+def safe_first_element(lst: List[T]) -> Optional[T]:
     """
-    Retrieve a value from a dictionary safely with a default fallback.
+    Retrieve the first element of a list safely.
     """
-    if key in dct:
-        return dct[key]
+    if lst:
+        return lst[0]
     else:
-        return default
+        return None
