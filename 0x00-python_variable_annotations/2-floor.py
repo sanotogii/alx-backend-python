@@ -7,6 +7,6 @@ Basic annotations - floor
 
 def floor(n: float) -> int:
     """
-    floor function
+    returns the floor of a number
     """
     return math.floor(n)
