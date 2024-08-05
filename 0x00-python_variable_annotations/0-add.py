@@ -5,5 +5,7 @@ add function
 
 
 def add(a: float, b: float) -> float:
+    """
+    add operation
+    """
     return a+b
-
