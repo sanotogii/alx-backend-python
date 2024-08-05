@@ -3,7 +3,7 @@
 This module contains a function safe_first_element that retrieves
 the first element of a list safely, or returns None if the list is empty.
 """
-from typing import List, Optional, TypeVar
+from typing import Any, Sequence, Union
 
 
 def safe_first_element(lst: Sequence[Any]) -> Union[Any, None]:
