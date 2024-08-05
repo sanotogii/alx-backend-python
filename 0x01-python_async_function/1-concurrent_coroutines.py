@@ -14,7 +14,6 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     delays = []
     for _ in range(n):
         delay = await wait_random(max_delay)
-        # Insert delay in the sorted position
         if not delays or delay >= delays[-1]:
             delays.append(delay)
         else:
