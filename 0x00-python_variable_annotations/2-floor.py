@@ -3,7 +3,7 @@ import math
 """
 Basic annotations - floor
 """
- 
+
 
 def floor(n: float) -> int:
     """
