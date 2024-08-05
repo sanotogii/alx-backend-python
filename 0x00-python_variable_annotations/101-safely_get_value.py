@@ -3,13 +3,14 @@
 This module contains a function safely_get_value that retrieves
 a value from a dictionary safely, with a default fallback.
 """
-from typing import Mapping, Any, Union, TypeVar
+from typing import Any, Mapping, Union, TypeVar
+
 T = TypeVar('T')
+Res = Union[Any, T]
+Def = Union[T, None]
 
 
-def safely_get_value(
-    dct: Mapping[Any, T], key: Any, default: Union[T, None] = None
-) -> Union[T, None]:
+def safely_get_value(dct: Mapping, key: Any, default: Def = None) -> Res:
     """
     Retrieve a value from a dictionary safely with a default fallback.
     """
