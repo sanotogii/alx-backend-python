@@ -16,6 +16,4 @@ async def async_comprehension() -> List[float]:
     result = []
     async for number in async_generator():
         result.append(number)
-        if len(result) == 10:
-            break
     return result
