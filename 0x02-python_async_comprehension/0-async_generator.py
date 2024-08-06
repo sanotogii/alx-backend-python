@@ -5,6 +5,7 @@ Async Generator
 import asyncio
 import random
 
+
 async def async_generator():
     """
     he coroutine will loop 10 times, each time asynchronously
