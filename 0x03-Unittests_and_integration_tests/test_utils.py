@@ -51,18 +51,18 @@ class TestGetJson(unittest.TestCase):
         mock_get.assert_called_once_with(test_url)
 
 
-class TestClass:
-
-    def a_method(self):
-        return 42
-
-    @memoize
-    def a_property(self):
-        return self.a_method()
-
-
 class TestMemoize(unittest.TestCase):
     """test memoize"""
+
+    class TestClass:
+        """TestClass"""
+
+        def a_method(self):
+            return 42
+
+        @memoize
+        def a_property(self):
+            return self.a_method()
 
     @patch.object(TestClass, 'a_method')
     def test_memoize(self, mock_a_method):
