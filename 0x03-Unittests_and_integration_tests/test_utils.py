@@ -20,7 +20,6 @@ class TestAccessNestedMap(unittest.TestCase):
         ]
     )
     def test_access_nested_map(self, nested_map, path, expected):
-        with self.assertRaises(KeyError) as context:
             actual = access_nested_map(nested_map, path)
             self.assertEqual(actual, expected)
     @parameterized.expand(
